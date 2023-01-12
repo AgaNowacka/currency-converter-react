@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { currencies } from "./currencies";
-import Form from "./Form";
+import { Form } from "./Form";
 
 
 function App() {
