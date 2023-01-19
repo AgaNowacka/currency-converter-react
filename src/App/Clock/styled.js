@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
 export const StyledClock = styled.div`
     text-align: right;
-    color: rgb(121, 118, 118);
+    color: ${({ theme }) => theme.color.boulder};
     padding: 10px;
     font-family: 'Titillium Web', sans-serif;
     

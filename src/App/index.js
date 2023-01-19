@@ -5,6 +5,7 @@ import { Form } from "./Form";
 import { Clock } from "./Clock";
 
 
+
 function App() {
 
   const [result, setResult] = useState();
@@ -23,12 +24,14 @@ function App() {
 
 
   return (
+
     <Wrapper>
       <Clock />
       <Form result={result} calculateResult={calculateResult} />
     </Wrapper>
+
   );
-  
+
 }
 
 
