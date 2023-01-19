@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css";
+import { StyledForm, Header, LabelText, Field, Button, Info } from "./styled";
 
 
 export const Form = ({ calculateResult, result }) => {
@@ -16,15 +16,15 @@ export const Form = ({ calculateResult, result }) => {
 
     return (
 
-        <form className="form" onSubmit={onSubmit}>
-            <h1 className="form__header">Przelicznik walut</h1>
+        <StyledForm onSubmit={onSubmit}>
+            <Header>Przelicznik walut</Header>
             <p>
-                <label><span className="form__labelText">Kwota w PLN*:</span>
-                    <input
+                <label>
+                    <LabelText>Kwota w PLN*:</LabelText>
+                    <Field
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         type="number"
-                        className="form__field"
                         placeholder="Wpisz kwotę w PLN"
                         step="0.01"
                         required
@@ -33,11 +33,11 @@ export const Form = ({ calculateResult, result }) => {
             </p>
             <p>
                 <label>
-                    <span className="form__labelText">Waluta:</span>
-                    <select
+                    <LabelText>Waluta:</LabelText>
+                    <Field
+                        as="select"
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
-                        className="form__field"
                     >
                         {currencies.map((currency => (
                             <option
@@ -47,15 +47,15 @@ export const Form = ({ calculateResult, result }) => {
                                 {currency.name}
                             </option>
                         )))}
-                    </select>
+                    </Field>
                 </label>
             </p>
             <p>
-                <button className="form__button">Przelicz!</button>
+                <Button>Przelicz!</Button>
             </p>
-            <p className="form__info">Kursy pochodzą ze strony nbp.pl z Tabeli nr 228/A/NBP/2022 z dnia Tabela z dnia
-                2022-11-25</p>
+            <Info>Kursy pochodzą ze strony nbp.pl z Tabeli nr 228/A/NBP/2022 z dnia Tabela z dnia
+                2022-11-25</Info>
             <Result result={result} />
-        </form>
+        </StyledForm>
     );
 };
