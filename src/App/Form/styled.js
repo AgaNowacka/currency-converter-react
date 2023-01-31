@@ -56,3 +56,10 @@ export const Info = styled.p`
     text-align: center;
 `;
 
+export const Loading = styled.p`
+    color: ${({ theme }) => theme.color.primaryColor}
+`;
+
+export const Failure = styled.p`
+    color: ${({ theme }) => theme.color.crimson}
+`;
