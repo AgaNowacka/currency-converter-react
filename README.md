@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is Currency Convert with Api in React. You can exchange diffrent currencies.
+
+## Technologies
+
+- Styled Components (themeProvider)
+- ES12 features
+- Hooks: useState, useEffect
+- Custom Hooks
+- Responsive Web Design
+- fetch
+
+This project was bootstrapped with Create React App.
 
 ## Available Scripts
 
